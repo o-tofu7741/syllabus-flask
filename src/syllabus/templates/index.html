@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Syllabus for MU</title>
+    <meta name="description" content="明星大学のシラバス検索システムのクローンサイト" />
+    <meta name="keywords" content="明星大学,勉天,シラバス,丸山研究室,検索" />
+    <!-- <link rel="stylesheet" href="sample.css" /> -->
+  </head>
+
+  <body>
+    <!----- ヘッダー ----->
+    <!-- <header>シラバス検索</header> -->
+    <!-- <nav>ナビ</nav> -->
+    <!----- ヘッダー END ----->
+
+    <!----- メインコンテンツ ----->
+    <main>
+      <article>
+        <h1>明星大学 シラバス検索 2023</h1>
+        <form action="/search" method="post">
+          <p>
+            <label
+              >科目名：<input type="text" name="name" size="30" maxlength="20"
+            /></label>
+          </p>
+          <p>
+            <label
+              >教員名：<input type="text" name="teacher" size="30" maxlength="20"
+            /></label>
+          </p>
+          <p>
+            対象学年：
+            <label><input type="checkbox" name="gakunen" value="1" />１年</label>
+            <label><input type="checkbox" name="gakunen" value="2" />２年</label>
+            <label><input type="checkbox" name="gakunen" value="3" />３年</label>
+            <label><input type="checkbox" name="gakunen" value="4" />４年</label>
+          </p>
+          <p>
+            開講時期：
+            <label><input type="checkbox" name="gakki" value="0" />通年</label>
+            <label><input type="checkbox" name="gakki" value="1" />前期</label>
+            <label><input type="checkbox" name="gakki" value="2" />後期</label>
+            <!-- <label><input type="checkbox" name="gakki" value="4" />集中講義</label> -->
+          </p>
+          <p>
+            曜日：
+            <label><input type="checkbox" name="yobi" value="1" />月</label>
+            <label><input type="checkbox" name="yobi" value="2" />火</label>
+            <label><input type="checkbox" name="yobi" value="3" />水</label>
+            <label><input type="checkbox" name="yobi" value="4" />木</label>
+            <label><input type="checkbox" name="yobi" value="5" />金</label>
+            <label><input type="checkbox" name="yobi" value="6" />土</label>
+            <!-- <label><input type="checkbox" name="yobi" value="7" />その他</label> -->
+          </p>
+          <p>
+            時限：
+            <label><input type="checkbox" name="jigen" value="1" />1限</label>
+            <label><input type="checkbox" name="jigen" value="2" />2限</label>
+            <label><input type="checkbox" name="jigen" value="3" />3限</label>
+            <label><input type="checkbox" name="jigen" value="4" />4限</label>
+            <label><input type="checkbox" name="jigen" value="5" />5限</label>
+            <label><input type="checkbox" name="jigen" value="6" />6限</label>
+            <!-- <label><input type="checkbox" name="jigen" value="8" />その他</label> -->
+          </p>
+          <p>
+            <label
+              >キーワード：<input type="text" name="keywords" size="30" maxlength="20"
+            /></label>
+          </p>
+          <p>
+            <input type="submit" value="検索" />
+            <input type="reset" value="リセット" />
+          </p>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>

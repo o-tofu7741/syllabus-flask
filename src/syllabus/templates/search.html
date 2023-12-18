@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 必要なメタタグ、タイトル、およびスタイルシートがあれば含める -->
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <section>
+          <h2>検索結果</h2>
+          {% for subject in subjects %}
+          <div class="subj">
+            <a href="{{ subject.id_url }}">{{ subject.name }} | 講師:{{ subject.teacher }} | 学期:{{subject.gakki}} | 曜日:{{subject.yobi}} | 時限:{{subject.jigen}} | 学年:{{subject.gakunen}}</a>
+          </div>
+          {% endfor %}
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

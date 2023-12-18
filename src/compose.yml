@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - "13306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_APP_USER}
+      MYSQL_PASSWORD: ${MYSQL_APP_PASSWORD}
+      TZ: "Asia/Tokyo"
+    restart: always
+    volumes:
+      # 永続データ
+      # .data/dbは起動時に自動生成される
+      # - ./.data/db:/var/lib/mysql
+
+      # 起動時のデータ初期化
+      - ./initdb:/docker-entrypoint-initdb.d
+
+      # mysql用の設定
+      - ./initdb/my.cnf:/etc/mysql/conf.d/my.cnf
+
+#   cli:
+#     image: mysql
+#     networks:
+#       - mysql-network
+#     command: mysql -hmysql -uuser -ppassword db
+
+# networks:
+#   mysql-network:
+#     driver: bridge

@@ -1,0 +1,47 @@
+/* 全体のレイアウト調整 */
+.rowStyle, .rowMargin {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1px; /* 行ごとのスペースを調整 */
+    height: auto !important;
+}
+
+.colStyle {
+    padding: 4px 8px; /* カラムの内側のスペースを調整 */
+    box-sizing: border-box; /* ボーダーボックスモデルを使用 */
+}
+
+/* テキストのスタイリング */
+.ui-widget-header {
+    background-color: #f0f0f0; /* ヘッダーの背景色を設定 */
+    font-weight: bold;
+}
+
+.ui-widget-content {
+    background-color: #ffffff; /* コンテンツの背景色を設定 */
+}
+
+/* ボーダー設定 */
+.colBorder {
+    border: 1px solid #ccc;
+}
+
+/* 幅の調整 */
+.colStyle {
+    flex: 1;
+}
+
+/* テキストの配置 */
+.colStyle {
+    text-align: left;
+}
+body {
+    width: 95%;
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+body > div:nth-child(n+5):nth-child(-n+10),div:nth-child(n+15):nth-child(-n+17){
+    display: none;
+}
